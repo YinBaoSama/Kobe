@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=latex 2020.9.19)  6 OCT 2020 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=latex 2020.9.19)  6 OCT 2020 18:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1617,8 +1617,7 @@ File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
 \pixel=\skip105
-
-No file slides.aux.
+ (./slides.aux)
 \openout1 = `slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
@@ -1639,7 +1638,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
 LaTeX Font Info:    ... okay on input line 175.
 LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 175.
 LaTeX Font Info:    Trying to load font information for FML+fncmi on input line 175.
-(d:/filp/filp00/tex/texlive/2020/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
+ (d:/filp/filp00/tex/texlive/2020/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 File: fmlfncmi.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncmi.
 )
 LaTeX Font Info:    ... okay on input line 175.
@@ -1704,12 +1703,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 175.
 LaTeX Info: Redefining \pageref on input line 175.
 LaTeX Info: Redefining \nameref on input line 175.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
+ (./slides.bm) (./slides.bm)
 \openout3 = `slides.bm'.
 
+ (./slides.toc)
 \openout4 = `slides.toc'.
 
 Package caption Info: Begin \AtBeginDocument code.
@@ -1717,7 +1714,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 LaTeX Font Info:    Redeclaring math accent \widehat on input line 175.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 175.
  (d:/filp/filp00/tex/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
@@ -1774,45 +1771,16 @@ LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 11.15991pt on input line 178.
  [2]
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 188.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 7.43994pt on input line 188.
-
-
-LaTeX Warning: Reference `lastslide' on page 3 undefined on input line 188.
-
-[3]
+(Font)              scaled to size 13.39188pt on input line 188.
+ [3]
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 19.28804pt on input line 193.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 19.28804pt on input line 193.
-
-
-LaTeX Warning: Reference `lastslide' on page 4 undefined on input line 193.
-
-[4]
-
-LaTeX Warning: Reference `lastslide' on page 5 undefined on input line 259.
-
-[5]
-
-LaTeX Warning: Reference `lastslide' on page 6 undefined on input line 628.
-
-[6]
-
-LaTeX Warning: Reference `lastslide' on page 7 undefined on input line 707.
-
-[7]
-
-LaTeX Warning: Reference `lastslide' on page 8 undefined on input line 889.
-
-[8]
-
-LaTeX Warning: Reference `lastslide' on page 9 undefined on input line 964.
-
-[9]
-
-LaTeX Warning: Reference `lastslide' on page 10 undefined on input line 1067.
-
+ [4] [5] [6] [7] [8] [9]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 1067.
 
 Overfull \hbox (31.3592pt too wide) in paragraph at lines 1067--1067
@@ -1821,8 +1789,6 @@ Overfull \hbox (31.3592pt too wide) in paragraph at lines 1067--1067
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 7.06795pt on input line 1067.
-LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 1067.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
 (Font)              scaled to size 6.99199pt on input line 1067.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
@@ -1850,9 +1816,6 @@ See the caption package documentation for explanation.
 Missing character: There is no ^^L in font fourier-mex!
 [10]
 
-LaTeX Warning: Reference `lastslide' on page 11 undefined on input line 1112.
-
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1112.
 See the caption package documentation for explanation.
@@ -1862,44 +1825,23 @@ Overfull \hbox (21.00186pt too wide) in paragraph at lines 1112--1112
 [] [] 
  []
 
-[11]
-
-LaTeX Warning: Reference `lastslide' on page 12 undefined on input line 1154.
-
-[12]
-
-LaTeX Warning: Reference `lastslide' on page 13 undefined on input line 1186.
-
-[13]
-
-LaTeX Warning: Reference `lastslide' on page 14 undefined on input line 1269.
-
+[11] [12] [13]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1269.
 See the caption package documentation for explanation.
 
-[14]
-
-LaTeX Warning: Reference `lastslide' on page 15 undefined on input line 1390.
-
-[15]
-
-LaTeX Warning: Reference `lastslide' on page 16 undefined on input line 1478.
-
+[14] [15]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1478.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 13.39188pt on input line 1478.
-LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 9.29993pt on input line 1478.
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 7.43994pt on input line 1478.
 [16]
-
-LaTeX Warning: Reference `lastslide' on page 17 undefined on input line 1523.
-
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 1523.
@@ -1910,33 +1852,15 @@ Overfull \hbox (4.66704pt too wide) in paragraph at lines 1523--1523
  [][] 
  []
 
-[17]
-
-LaTeX Warning: Reference `lastslide' on page 18 undefined on input line 1695.
-
-[18]
-
-LaTeX Warning: Reference `lastslide' on page 19 undefined on input line 1732.
-
+[17] [18]
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
 (Font)              scaled to size 13.39188pt on input line 1732.
-[19]
-
-LaTeX Warning: Reference `lastslide' on page 20 undefined on input line 1775.
-
-[20]
+ [19] [20]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1777.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 1777.
- (./slides.aux
-
-Package pdfbase Warning: Rerun to get internal references right!
-
-)
+ (./slides.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1777.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1777.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1944,12 +1868,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1777.
  ) 
 Here is how much of TeX's memory you used:
- 47535 strings out of 480877
- 1045816 string characters out of 5903689
- 1602633 words of memory out of 5000000
- 62140 multiletter control sequences out of 15000+600000
+ 47582 strings out of 480877
+ 1046318 string characters out of 5903689
+ 1603633 words of memory out of 5000000
+ 62179 multiletter control sequences out of 15000+600000
  573800 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,15n,98p,2367b,1036s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.dvi (20 pages, 107436 bytes).
+Output written on slides.dvi (20 pages, 267104 bytes).
