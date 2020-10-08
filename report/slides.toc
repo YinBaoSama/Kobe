@@ -3,7 +3,17 @@
 \pdcontentsline{1}{5}{Overall Research Ideas}
 \pdcontentsline{0}{6}{Overall Research Ideas}
 \pdcontentsline{1}{7}{Data visualization}
-\pdcontentsline{0}{8}{Variable meaning}
-\pdcontentsline{0}{9}{Step Two - Outlying Degree Scoring}
-\pdcontentsline{1}{10}{Evaluation Results}
-\pdcontentsline{1}{11}{Conclusion}
+\pdcontentsline{0}{8}{Check the data ,Data cleaning,Data process}
+\pdcontentsline{0}{9}{Data visualization}
+\pdcontentsline{0}{10}{Data visualization}
+\pdcontentsline{0}{11}{Data visualization}
+\pdcontentsline{0}{12}{Data visualization}
+\pdcontentsline{0}{13}{Data visualization}
+\pdcontentsline{0}{14}{Data visualization}
+\pdcontentsline{0}{15}{Data visualization}
+\pdcontentsline{0}{16}{Data visualization}
+\pdcontentsline{0}{17}{Data visualization}
+\pdcontentsline{1}{18}{Build the model}
+\pdcontentsline{0}{19}{Build the model}
+\pdcontentsline{0}{20}{Build and train the model and produce the submission data}
+\pdcontentsline{1}{21}{Conclusion}

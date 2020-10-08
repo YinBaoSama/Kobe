@@ -640,9 +640,9 @@ an eight-figure contract and 5 championship rings. What will you get from it?
 %Related Work - Outlying Aspects Mining
 \begin{itemize}
 \item
-Step One - \textcolor{orange}{Check yhe data ,Data cleaning,Data process}
+Step One - \textcolor{green}{Check the data ,Data cleaning,Data process}
 \item
-Step Two - \textcolor{green}{Data visualization}
+Step Two - \textcolor{orange}{Data visualization}
 \item
 Step Three - \textcolor{blue}{Build the model and select the optimal parameters }
 \item
@@ -973,6 +973,7 @@ Step Three - \textcolor{red}{Visualization parameters and process the test data 
 
 \section{Data visualization}
 
+\vspace{1cm}%%%这个东西能够把页码整对
 
 %%==========================================================================================
 %%
@@ -1017,113 +1018,204 @@ Step Three - \textcolor{red}{Visualization parameters and process the test data 
 
 %%==========================================================================================
 %%
-\begin{slide}{Variable meaning}
-%Step One - Group Feature Extraction}
-% \begin{itemize}
-% \item
-% \smallskip
-% Suppose $f_1$, $f_2$, $f_3$ are three features of $G_q$.
+\begin{slide}{Check the data ,Data cleaning,Data process}
 
-% $f_1$: \{$x_1, x_2, x_3, x_4, x_5, x_2, x_3, x_4, x_1, x_2$\} \\
+ \begin{itemize}
+  \item
+ \textcolor{orange}{First,let's check the data.}
 
-% $f_2$: \{$y_2, y_2, y_1, y_2, y_3, y_3, y_5, y_4, y_4, y_2$\} \\
+ \begin{center}
+    \includegraphics[width=.9\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/data.eps}
+ \end{center}
 
-% $f_3$: \{$z_1, z_4, z_2, z_4, z_5, z_3, z_1, z_2, z_4, z_2$\} \\
-% \end{itemize}
 
-\begin{center}
-    \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/attack.eps}
-\end{center}
+ \item
+ \textcolor{orange}{There must be variables in so much data that have nothing to do with our model, and we will remove them in some way.}
+ \end{itemize}
 
-% \begin{figure}[htbp]
-%     \centering
-%     \subfigure[$f_1$]{
-%         \selectcolormodel{rgb}
-%         \missingfigure[figwidth=5.5cm]{Test.}
-%         %\includegraphics[width=0.25\textwidth]{figures//frequency-distribution-feature1.eps}
-%         \label{fig:fre-dis-f1}
-%     }
-%     \subfigure[$f_2$]{
-%         \selectcolormodel{rgb}
-%         \missingfigure[figwidth=5.5cm]{Test.}
-%         \label{fig:fre-dis-f2}
-%     }
-%     \subfigure[$f_3$]{
-%         \selectcolormodel{rgb}
-%         \missingfigure[figwidth=5.5cm]{Test.}
-%         \label{fig:fre-dis-f3}
-%     }
-%     \caption{Histogram of $G_q$ on three features}
-%     \label{fig:fre-dis-each-feature}
-% \end{figure}
-%%==========================================================================================
 
-% \begin{note}
-% Now, let me specifically explain what each step means.
-% The first step is group feature extraction.
-% we can take one group extraction as an example.
-
-% We suppose to use $f_1$, $f_2$, $f_3$ to represent three features of $G_q$.
-% The values of $f_1$ are {$x_1$, $x_2$, $x_3$, $x_4$} and so on.
-% And the values of $f_2$ are {$y_2$, $y_2$, $y_1$, $x_2$} and so on.
-
-% For feature $f_1$,
-% we use the histogram to illustrate feature $f_1$ after
-% counting the frequency of each value,
-% as show in figure 6 (a).
-
-% Similarly,
-% we can also extract other features of the group
-% according to feature $f_1$.
-% \end{note}
-%%==========================================================================================
 
 \end{slide}
+
+%locxy
+\begin{slide}{Data visualization}
+
+  \begin{itemize}
+
+    \item
+   \textcolor{orange}{After we delete  blank data,we create charts to check the relationship between variable.}
+
+  \begin{center}
+      \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/locxy.eps}
+  \end{center}
+
+  \item
+   \textcolor{orange}{We can make sure that the shooting position and latitude and longitude are basically consistent with the court.}
+ \end{itemize}
+
+\end{slide}
+
+%shotzone
+\begin{slide}{Data visualization}
+
+   \begin{center}
+      \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/shotzone.eps}
+   \end{center}
+
+\begin{itemize}
+  \item
+  \textcolor{orange}{The shotzone also has the same characteristic whth the lat and lon.}
+
+ \end{itemize}
+
+\end{slide}
+
+%shotarea
+\begin{slide}{Data visualization}
+
+  \begin{center}
+     \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/shotarea.eps}
+  \end{center}
+
+\begin{itemize}
+ \item
+ \textcolor{orange}{The shottype also has the same characteristic whth the lat and lon.}
+
+\end{itemize}
+
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%attack
+\begin{slide}{Data visualization}
+
+  \begin{center}
+     \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/attack.eps}
+  \end{center}
+
+\begin{itemize}
+ \item
+ \textcolor{orange}{Kobe's way of shooting, it is clear that the most jump shot.}
+
+\end{itemize}
+
+\end{slide}
+
+%getpoint
+\begin{slide}{Data visualization}
+
+  \begin{center}
+     \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/getpoint.eps}
+  \end{center}
+
+\begin{itemize}
+ \item
+ \textcolor{orange}{On the shooting percentage, the dunk is undoubtedly the highest.}
+
+\end{itemize}
+
+\end{slide}
+
+%shotnumber
+\begin{slide}{Data visualization}
+
+  \begin{center}
+     \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/shotnumber.eps}
+  \end{center}
+
+\begin{itemize}
+ \item
+ \textcolor{orange}{From the shooting distance, most of Kobe is in the middle distance.}
+
+\end{itemize}
+
+\end{slide}
+
+%period
+\begin{slide}{Data visualization}
+
+  \begin{center}
+     \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/period.eps}
+  \end{center}
+
+\begin{itemize}
+ \item
+ \textcolor{orange}{Kobe's shooting times in each quarter are the most in the third quarter and the second in the first quarter.}
+ \item
+ \textcolor{orange}{Because the 5, 6 and 7 quarters are overtime games, naturally much less.}
+\end{itemize}
+
+\end{slide}
+
+%peget
+\begin{slide}{Data visualization}
+
+  \begin{center}
+     \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/peget.eps}
+  \end{center}
+
+\begin{itemize}
+ \item
+ \textcolor{orange}{The shooting percentage of each section can be seen that Kobe's shooting percentage is the lowest in the fourth quarter.}
+ \item
+ \textcolor{orange}{It can be seen that physical strength has some influence on Kobe's shooting percentage.}
+\end{itemize}
+
+\end{slide}
+
+%final
+\begin{slide}{Data visualization}
+
+  \begin{center}
+     \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/final.eps}
+  \end{center}
+
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %%==========================================================================================
 
 
 %%==========================================================================================
 %%
-\begin{slide}{Step Two - Outlying Degree Scoring}
-%Step Two - Outlying Degree Scoring
-% \begin{itemize}
-% \item
-% Calculate Earth Mover Distance
+% \begin{slide}{Step Two - Outlying Degree Scoring}
+% %Step Two - Outlying Degree Scoring
+% % \begin{itemize}
+% % \item
+% % Calculate Earth Mover Distance
 
-% \begin{itemize}
-% \item
-% Represent one feature among different groups
+% % \begin{itemize}
+% % \item
+% % Represent one feature among different groups
 
-% \item
-% Purpose: calculate the minimum mean distance
-% \end{itemize}
+% % \item
+% % Purpose: calculate the minimum mean distance
+% % \end{itemize}
 
-% \begin{figure}
-%    \selectcolormodel{rgb}
-%    \missingfigure{Make a sketch of the structure of a trebuchet.}
-% %  \includegraphics[width=0.4\textwidth]{figures//example3.eps}\\
-%    \caption{EMD of one feature}\label{EMD}
-% \end{figure}
-% \end{itemize}
+% % \begin{figure}
+% %    \selectcolormodel{rgb}
+% %    \missingfigure{Make a sketch of the structure of a trebuchet.}
+% % %  \includegraphics[width=0.4\textwidth]{figures//example3.eps}\\
+% %    \caption{EMD of one feature}\label{EMD}
+% % \end{figure}
+% % \end{itemize}
 
-%%==========================================================================================
-% \begin{note}
-% The second step is outlying degree scoring,
-% which is to evaluate the outlying degree between the target group and competitive groups.
+% %%==========================================================================================
+% % \begin{note}
+% % The second step is outlying degree scoring,
+% % which is to evaluate the outlying degree between the target group and competitive groups.
 
-% First,
-% we calculate the earth mover distance of one feature in different groups.
+% % First,
+% % we calculate the earth mover distance of one feature in different groups.
 
-% The earth mover distance reflects the minimum mean distance between
-% the target group and other groups on one feature.
+% % The earth mover distance reflects the minimum mean distance between
+% % the target group and other groups on one feature.
 
-% Later on,
-% we utilize the EMD to measure the differences between groups.
-% \end{note}
-%%==========================================================================================
+% % Later on,
+% % we utilize the EMD to measure the differences between groups.
+% % \end{note}
+% %%==========================================================================================
 
-\end{slide}
+% \end{slide}
 %%
 %%==========================================================================================
 
@@ -1401,9 +1493,33 @@ Step Three - \textcolor{red}{Visualization parameters and process the test data 
 %%==========================================================================================
 
 
-\section{Evaluation Results}
+\section{Build the model}
+\vspace{1cm}%%%这个东西能够把页码整对
+
+\begin{slide}{Build the model}
+
+\begin{itemize}
+ \item
+ \textcolor{blue}{We need to eliminate duplicate data before we build models.}
+
+ \item
+ \textcolor{blue}{Encoded the data by one-hot.}
+
+ \item
+ \textcolor{blue}{Choose the minimum value of loss and the number of optimal trees, the optimal value of maximum depth.}
+
+\end{itemize}
+
+\end{slide}
 
 
+\begin{slide}{Build and train the model and produce the submission data}
+
+  \begin{center}
+      \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/deptree.eps}
+   \end{center}
+  
+\end{slide}
 %%==========================================================================================
 %%
 % \begin{slide}[toc=,bm=]{Evaluation}
@@ -1711,22 +1827,25 @@ Step Three - \textcolor{red}{Visualization parameters and process the test data 
 %%==========================================================================================
 %%
 \begin{slide}[toc=,bm=]{Conclusion}
-\begin{itemize}
-\item
-\smallskip
-Formalize the problem of \emph{Group Outlying Aspects Mining} by
-extending outlying aspects mining;
+  
+% \begin{itemize}
 
-\item
-\smallskip
-Propose a novel method \textcolor{orange}{GOAM algorithm} to solve the
-\emph{Group Outlying Aspects Mining} problem;
+% %下面这些涉及很多格式以后可能会用到
+% % \item
+% % \smallskip
+% % Formalize the problem of \emph{Group Outlying Aspects Mining} by
+% % extending outlying aspects mining;
 
-\item
-\smallskip
-Utilize the pruning strategies to reduce time complexity.
+% % \item
+% % \smallskip
+% % Propose a novel method \textcolor{orange}{GOAM algorithm} to solve the
+% % \emph{Group Outlying Aspects Mining} problem;
 
-\end{itemize}
+% % \item
+% % \smallskip
+% % Utilize the pruning strategies to reduce time complexity.
+
+% \end{itemize}
 
 %%==========================================================================================
 % \begin{note}
