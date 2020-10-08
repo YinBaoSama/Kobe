@@ -636,13 +636,17 @@ an eight-figure contract and 5 championship rings. What will you get from it?
 
 %%==========================================================================================
 %%
-\begin{slide}{Step one --- Data process}
+\begin{slide}{Overall Research Ideas}
 %Related Work - Outlying Aspects Mining
 \begin{itemize}
 \item
-Existing Methods - \textcolor{orange}{Download from kaggle}
+Step One - \textcolor{orange}{Check yhe data ,Data cleaning,Data process}
 \item
-Existing Methods - \textcolor{orange}{Configure the running environment and load the required packages}
+Step Two - \textcolor{green}{Data visualization}
+\item
+Step Three - \textcolor{blue}{Build the model and select the optimal parameters }
+\item
+Step Three - \textcolor{red}{Visualization parameters and process the test data }
 
 %下面我注释了很多页
 % \begin{itemize}
@@ -862,37 +866,37 @@ Existing Methods - \textcolor{orange}{Configure the running environment and load
 
 %%==========================================================================================
 %%
-\begin{slide}{Challenges (1)}
-%Challenges (1)
-\begin{itemize}
-\item
-How to \textcolor{orange}{represent} the group features.
+% \begin{slide}{Challenges (1)}
+% %Challenges (1)
+% \begin{itemize}
+% \item
+% How to \textcolor{orange}{represent} the group features.
 
-\begin{itemize}
-\item
-Can be affected by outlier values.
+% \begin{itemize}
+% \item
+% Can be affected by outlier values.
 
-\item
-Can \textcolor{orange}{Not} reflect the overall distribution of group features.
-\end{itemize}
-\end{itemize}
+% \item
+% Can \textcolor{orange}{Not} reflect the overall distribution of group features.
+% \end{itemize}
+% \end{itemize}
 
-%%==========================================================================================
-\begin{note}
-Based on current existing methods,
-there still remains some research challenges.
+% %%==========================================================================================
+% % \begin{note}
+% % Based on current existing methods,
+% % there still remains some research challenges.
 
-The first one is how to represent the group features
-based on the features of the individuals in the group.
+% % The first one is how to represent the group features
+% % based on the features of the individuals in the group.
 
-Although the arithmetic mean of all elements
-in each feature can describe the features of one group.
-It can be affected by outlier values,
-and can't reflect the entire distribution of group features.L
-\end{note}
-%%==========================================================================================
+% % Although the arithmetic mean of all elements
+% % in each feature can describe the features of one group.
+% % It can be affected by outlier values,
+% % and can't reflect the entire distribution of group features.L
+% % \end{note}
+% %%==========================================================================================
 
-\end{slide}
+% \end{slide}
 %%
 %%==========================================================================================
 
@@ -967,7 +971,7 @@ and can't reflect the entire distribution of group features.L
 %%==========================================================================================
 
 
-\section{GOAM Algorithm}
+\section{Data visualization}
 
 
 %%==========================================================================================
@@ -1013,61 +1017,65 @@ and can't reflect the entire distribution of group features.L
 
 %%==========================================================================================
 %%
-\begin{slide}{Step One - Group Feature Extraction}
+\begin{slide}{Variable meaning}
 %Step One - Group Feature Extraction}
-\begin{itemize}
-\item
-\smallskip
-Suppose $f_1$, $f_2$, $f_3$ are three features of $G_q$.
+% \begin{itemize}
+% \item
+% \smallskip
+% Suppose $f_1$, $f_2$, $f_3$ are three features of $G_q$.
 
-$f_1$: \{$x_1, x_2, x_3, x_4, x_5, x_2, x_3, x_4, x_1, x_2$\} \\
+% $f_1$: \{$x_1, x_2, x_3, x_4, x_5, x_2, x_3, x_4, x_1, x_2$\} \\
 
-$f_2$: \{$y_2, y_2, y_1, y_2, y_3, y_3, y_5, y_4, y_4, y_2$\} \\
+% $f_2$: \{$y_2, y_2, y_1, y_2, y_3, y_3, y_5, y_4, y_4, y_2$\} \\
 
-$f_3$: \{$z_1, z_4, z_2, z_4, z_5, z_3, z_1, z_2, z_4, z_2$\} \\
-\end{itemize}
+% $f_3$: \{$z_1, z_4, z_2, z_4, z_5, z_3, z_1, z_2, z_4, z_2$\} \\
+% \end{itemize}
 
-\begin{figure}[htbp]
-    \centering
-    \subfigure[$f_1$]{
-        \selectcolormodel{rgb}
-        \missingfigure[figwidth=5.5cm]{Test.}
-        %\includegraphics[width=0.25\textwidth]{figures//frequency-distribution-feature1.eps}
-        \label{fig:fre-dis-f1}
-    }
-    \subfigure[$f_2$]{
-        \selectcolormodel{rgb}
-        \missingfigure[figwidth=5.5cm]{Test.}
-        \label{fig:fre-dis-f2}
-    }
-    \subfigure[$f_3$]{
-        \selectcolormodel{rgb}
-        \missingfigure[figwidth=5.5cm]{Test.}
-        \label{fig:fre-dis-f3}
-    }
-    \caption{Histogram of $G_q$ on three features}
-    \label{fig:fre-dis-each-feature}
-\end{figure}
+\begin{center}
+    \includegraphics[width=.5\linewidth,height=.3\linewidth]{D:/filp/program/Kobe.git/data/attack.eps}
+\end{center}
 
+% \begin{figure}[htbp]
+%     \centering
+%     \subfigure[$f_1$]{
+%         \selectcolormodel{rgb}
+%         \missingfigure[figwidth=5.5cm]{Test.}
+%         %\includegraphics[width=0.25\textwidth]{figures//frequency-distribution-feature1.eps}
+%         \label{fig:fre-dis-f1}
+%     }
+%     \subfigure[$f_2$]{
+%         \selectcolormodel{rgb}
+%         \missingfigure[figwidth=5.5cm]{Test.}
+%         \label{fig:fre-dis-f2}
+%     }
+%     \subfigure[$f_3$]{
+%         \selectcolormodel{rgb}
+%         \missingfigure[figwidth=5.5cm]{Test.}
+%         \label{fig:fre-dis-f3}
+%     }
+%     \caption{Histogram of $G_q$ on three features}
+%     \label{fig:fre-dis-each-feature}
+% \end{figure}
 %%==========================================================================================
-\begin{note}
-Now, let me specifically explain what each step means.
-The first step is group feature extraction.
-we can take one group extraction as an example.
 
-We suppose to use $f_1$, $f_2$, $f_3$ to represent three features of $G_q$.
-The values of $f_1$ are {$x_1$, $x_2$, $x_3$, $x_4$} and so on.
-And the values of $f_2$ are {$y_2$, $y_2$, $y_1$, $x_2$} and so on.
+% \begin{note}
+% Now, let me specifically explain what each step means.
+% The first step is group feature extraction.
+% we can take one group extraction as an example.
 
-For feature $f_1$,
-we use the histogram to illustrate feature $f_1$ after
-counting the frequency of each value,
-as show in figure 6 (a).
+% We suppose to use $f_1$, $f_2$, $f_3$ to represent three features of $G_q$.
+% The values of $f_1$ are {$x_1$, $x_2$, $x_3$, $x_4$} and so on.
+% And the values of $f_2$ are {$y_2$, $y_2$, $y_1$, $x_2$} and so on.
 
-Similarly,
-we can also extract other features of the group
-according to feature $f_1$.
-\end{note}
+% For feature $f_1$,
+% we use the histogram to illustrate feature $f_1$ after
+% counting the frequency of each value,
+% as show in figure 6 (a).
+
+% Similarly,
+% we can also extract other features of the group
+% according to feature $f_1$.
+% \end{note}
 %%==========================================================================================
 
 \end{slide}
@@ -1079,82 +1087,40 @@ according to feature $f_1$.
 %%
 \begin{slide}{Step Two - Outlying Degree Scoring}
 %Step Two - Outlying Degree Scoring
-\begin{itemize}
-\item
-Calculate Earth Mover Distance
+% \begin{itemize}
+% \item
+% Calculate Earth Mover Distance
 
-\begin{itemize}
-\item
-Represent one feature among different groups
+% \begin{itemize}
+% \item
+% Represent one feature among different groups
 
-\item
-Purpose: calculate the minimum mean distance
-\end{itemize}
+% \item
+% Purpose: calculate the minimum mean distance
+% \end{itemize}
 
-\begin{figure}
-   \selectcolormodel{rgb}
-   \missingfigure{Make a sketch of the structure of a trebuchet.}
-%  \includegraphics[width=0.4\textwidth]{figures//example3.eps}\\
-   \caption{EMD of one feature}\label{EMD}
-\end{figure}
-\end{itemize}
-
-%%==========================================================================================
-\begin{note}
-The second step is outlying degree scoring,
-which is to evaluate the outlying degree between the target group and competitive groups.
-
-First,
-we calculate the earth mover distance of one feature in different groups.
-
-The earth mover distance reflects the minimum mean distance between
-the target group and other groups on one feature.
-
-Later on,
-we utilize the EMD to measure the differences between groups.
-\end{note}
-%%==========================================================================================
-
-\end{slide}
-%%
-%%==========================================================================================
-
+% \begin{figure}
+%    \selectcolormodel{rgb}
+%    \missingfigure{Make a sketch of the structure of a trebuchet.}
+% %  \includegraphics[width=0.4\textwidth]{figures//example3.eps}\\
+%    \caption{EMD of one feature}\label{EMD}
+% \end{figure}
+% \end{itemize}
 
 %%==========================================================================================
-%%
-\begin{slide}[toc=,bm=]{Step Two - Outlying Degree Scoring}
+% \begin{note}
+% The second step is outlying degree scoring,
+% which is to evaluate the outlying degree between the target group and competitive groups.
 
-\begin{itemize}
-\item
-Calculate the outlying degree
+% First,
+% we calculate the earth mover distance of one feature in different groups.
 
-\vspace{1.2cm}
+% The earth mover distance reflects the minimum mean distance between
+% the target group and other groups on one feature.
 
-\begin{centering}
-
-$ OD(G_q) = \sum_{1}^{n}EDM(h_{q_s}, h_{k_s}) $
-
-\end{centering}
-
-\begin{itemize}
-\item
-n $\Leftrightarrow$ the number of contrast groups.
-
-\item
-$h_{k_s}$  $\Leftrightarrow$ the histogram representation of $G_k$ in the subspace s.
-
-\end{itemize}
-\end{itemize}
-
-%%==========================================================================================
-\begin{note}
-Base on the earth mover distance,
-we can calculate the outlying degree using the formula shown on the screen.
-
-This formula is the outlying degree scoring function,
-n represents the number of competitive groups.
-$h_{k_s}$ is the histogram of $G_k$ in the subspace s.
-\end{note}
+% Later on,
+% we utilize the EMD to measure the differences between groups.
+% \end{note}
 %%==========================================================================================
 
 \end{slide}
@@ -1164,33 +1130,75 @@ $h_{k_s}$ is the histogram of $G_k$ in the subspace s.
 
 %%==========================================================================================
 %%
-\begin{slide}{Step Three - Outlying Aspects Identification}
-%Step Three - Outlying Aspects Identification
-\begin{itemize}
-\item
-Identify group outlying aspects mining based on the value
-of outlying degree.
+% \begin{slide}[toc=,bm=]{Step Two - Outlying Degree Scoring}
 
-\item
-The greater the outlying degree is,
-the more likely it is group outlying aspect.
-\end{itemize}
+% \begin{itemize}
+% \item
+% Calculate the outlying degree
 
-%%==========================================================================================
-\begin{note}
-Next,
-let me talk about the third step.
+% \vspace{1.2cm}
 
-In this step,
-we identify the group outlying aspects according to the value of the outlying degree.
+% \begin{centering}
 
-If a feature's outlying degree is greater,
-it is more likely to be a group outlying aspect.
-\end{note}
-%%==========================================================================================
+% $ OD(G_q) = \sum_{1}^{n}EDM(h_{q_s}, h_{k_s}) $
 
-\end{slide}
+% \end{centering}
+
+% \begin{itemize}
+% \item
+% n $\Leftrightarrow$ the number of contrast groups.
+
+% \item
+% $h_{k_s}$  $\Leftrightarrow$ the histogram representation of $G_k$ in the subspace s.
+
+% \end{itemize}
+% \end{itemize}
+
+% %%==========================================================================================
+% \begin{note}
+% Base on the earth mover distance,
+% we can calculate the outlying degree using the formula shown on the screen.
+
+% This formula is the outlying degree scoring function,
+% n represents the number of competitive groups.
+% $h_{k_s}$ is the histogram of $G_k$ in the subspace s.
+% \end{note}
+% %%==========================================================================================
+
+% \end{slide}
 %%
+%%==========================================================================================
+
+
+%%==========================================================================================
+%%
+% \begin{slide}{Step Three - Outlying Aspects Identification}
+% %Step Three - Outlying Aspects Identification
+% \begin{itemize}
+% \item
+% Identify group outlying aspects mining based on the value
+% of outlying degree.
+
+% \item
+% The greater the outlying degree is,
+% the more likely it is group outlying aspect.
+% \end{itemize}
+
+% %%==========================================================================================
+% \begin{note}
+% Next,
+% let me talk about the third step.
+
+% In this step,
+% we identify the group outlying aspects according to the value of the outlying degree.
+
+% If a feature's outlying degree is greater,
+% it is more likely to be a group outlying aspect.
+% \end{note}
+% %%==========================================================================================
+
+% \end{slide}
+% %%
 %%==========================================================================================
 
 
@@ -1232,47 +1240,47 @@ it is more likely to be a group outlying aspect.
 
 %%==========================================================================================
 %%下面加表格
-\begin{slide}[toc=,bm=]{Illustration}
-% Outlying Aspects Identification
-\begin{table}
-\setlength{\abovecaptionskip}{0pt}
-\setlength{\belowcaptionskip}{10pt}
-\centering
-\caption{Original Dataset}
-\begin{tabular}{ccccc | ccccc}
-  \toprule
-  $G_1$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ & $G_2$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ \\
-  \midrule
-   &10 & 8 & 9 & 8 & &7 & 7 & 6 & 6 \\
-   &9  & 9 & 7 & 9 & &8 & 9 & 9 & 8 \\
-   &8  & 10& 8 & 8 & &6 & 7 & 8 & 9  \\
-   &8  & 8 & 6 & 7 & &7 & 7 & 7 & 8  \\
-   &9  & 9 & 9 & 8 & &8 & 6 & 6 & 7  \\
-   \midrule
-   $G_3$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ & $G_4$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ \\
-   \midrule
-   &8 & 10 & 8 & 8 & &9 & 8 & 8 & 8\\
-   &9 & 9  & 7 & 9 & &7 & 7 & 7 & 9\\
-   &10& 9  & 10& 7 & &8 & 6 & 6 & 8\\
-   &9 & 10 & 8 & 6 & &9 & 8 & 8 & 7\\
-   &9 & 9  & 7 & 9 & &8 & 7 & 9 & 8\\
-  \bottomrule
-\end{tabular}
-\end{table}
+% \begin{slide}[toc=,bm=]{Illustration}
+% % Outlying Aspects Identification
+% \begin{table}
+% \setlength{\abovecaptionskip}{0pt}
+% \setlength{\belowcaptionskip}{10pt}
+% \centering
+% \caption{Original Dataset}
+% \begin{tabular}{ccccc | ccccc}
+%   \toprule
+%   $G_1$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ & $G_2$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ \\
+%   \midrule
+%    &10 & 8 & 9 & 8 & &7 & 7 & 6 & 6 \\
+%    &9  & 9 & 7 & 9 & &8 & 9 & 9 & 8 \\
+%    &8  & 10& 8 & 8 & &6 & 7 & 8 & 9  \\
+%    &8  & 8 & 6 & 7 & &7 & 7 & 7 & 8  \\
+%    &9  & 9 & 9 & 8 & &8 & 6 & 6 & 7  \\
+%    \midrule
+%    $G_3$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ & $G_4$ & $F_1$ & $F_2$ & $F_3$ & $F_4$ \\
+%    \midrule
+%    &8 & 10 & 8 & 8 & &9 & 8 & 8 & 8\\
+%    &9 & 9  & 7 & 9 & &7 & 7 & 7 & 9\\
+%    &10& 9  & 10& 7 & &8 & 6 & 6 & 8\\
+%    &9 & 10 & 8 & 6 & &9 & 8 & 8 & 7\\
+%    &9 & 9  & 7 & 9 & &8 & 7 & 9 & 8\\
+%   \bottomrule
+% \end{tabular}
+% \end{table}
 
-%%==========================================================================================
-\begin{note}
-Next,
-let me use an example to explain GOAM algorithm.
+% %%==========================================================================================
+% \begin{note}
+% Next,
+% let me use an example to explain GOAM algorithm.
 
-Suppose we have four groups.
-Each group has four features,
-and
-the specific values are shown in table $3$.
-\end{note}
-%%==========================================================================================
+% Suppose we have four groups.
+% Each group has four features,
+% and
+% the specific values are shown in table $3$.
+% \end{note}
+% %%==========================================================================================
 
-\end{slide}
+% \end{slide}
 %%
 %%==========================================================================================
 
@@ -1434,99 +1442,99 @@ the specific values are shown in table $3$.
 
 %%==========================================================================================
 %%
-\begin{slide}{Synthetic Dataset}
+% \begin{slide}{Synthetic Dataset}
 
-\begin{itemize}
-\item Synthetic Dataset and Ground Truth
-\end{itemize}
+% \begin{itemize}
+% \item Synthetic Dataset and Ground Truth
+% \end{itemize}
 
-\begin{table}
-\setlength{\abovecaptionskip}{0pt}
-\setlength{\belowcaptionskip}{10pt}
-\centering
-\caption{Synthetic Dataset and Ground Truth}
+% \begin{table}
+% \setlength{\abovecaptionskip}{0pt}
+% \setlength{\belowcaptionskip}{10pt}
+% \centering
+% \caption{Synthetic Dataset and Ground Truth}
 
-\begin{tabular}{p{2.8cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}}
-\hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Query group  & $\mathbf{F_1}$ & $\mathbf{F_2}$ & $F_3$ & $\mathbf{F_4}$ & $F_5$ & $F_6$ & $F_7$ & $F_8$\\
-\hline
-  $i_1$   & \bf{10} & \bf{8}  & 9  & \bf{7}  & 7 & 6 & 6  & 8\\
-  $i_2$   & \bf{9}  & \bf{9}  & 7  & \bf{8}  & 9 & 9 & 8  & 9\\
-  $i_3$   & \bf{8}  & \bf{10} & 8  & \bf{9}  & 6 & 8 & 7  & 8\\
-  $i_4$   & \bf{8}  & \bf{8}  & 6  & \bf{7}  & 8 & 8 & 6  & 7\\
-  $i_5$   & \bf{9}  & \bf{9}  & 9  & \bf{7}  & 7 & 7 & 8  & 8\\
-  $i_6$   & \bf{8}  & \bf{10} & 8  & \bf{8}  & 6 & 6 & 8  & 7\\
-  $i_7$   & \bf{9}  & \bf{9}  & 7  & \bf{9}  & 8 & 8 & 8  & 7\\
-  $i_8$   & \bf{10} & \bf{9}  & 10 & \bf{7}  & 7 & 7 & 7  & 7\\
-  $i_9$   & \bf{9}  & \bf{10} & 8  & \bf{8}  & 7 & 6 & 7  & 7\\
-  $i_{10}$& \bf{9}  & \bf{9}  & 7  & \bf{7}  & 7 & 8 & 8  & 8\\
-\hline
-\end{tabular}
-\end{table}
+% \begin{tabular}{p{2.8cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}p{0.9cm}}
+% \hline
+%   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+%   Query group  & $\mathbf{F_1}$ & $\mathbf{F_2}$ & $F_3$ & $\mathbf{F_4}$ & $F_5$ & $F_6$ & $F_7$ & $F_8$\\
+% \hline
+%   $i_1$   & \bf{10} & \bf{8}  & 9  & \bf{7}  & 7 & 6 & 6  & 8\\
+%   $i_2$   & \bf{9}  & \bf{9}  & 7  & \bf{8}  & 9 & 9 & 8  & 9\\
+%   $i_3$   & \bf{8}  & \bf{10} & 8  & \bf{9}  & 6 & 8 & 7  & 8\\
+%   $i_4$   & \bf{8}  & \bf{8}  & 6  & \bf{7}  & 8 & 8 & 6  & 7\\
+%   $i_5$   & \bf{9}  & \bf{9}  & 9  & \bf{7}  & 7 & 7 & 8  & 8\\
+%   $i_6$   & \bf{8}  & \bf{10} & 8  & \bf{8}  & 6 & 6 & 8  & 7\\
+%   $i_7$   & \bf{9}  & \bf{9}  & 7  & \bf{9}  & 8 & 8 & 8  & 7\\
+%   $i_8$   & \bf{10} & \bf{9}  & 10 & \bf{7}  & 7 & 7 & 7  & 7\\
+%   $i_9$   & \bf{9}  & \bf{10} & 8  & \bf{8}  & 7 & 6 & 7  & 7\\
+%   $i_{10}$& \bf{9}  & \bf{9}  & 7  & \bf{7}  & 7 & 8 & 8  & 8\\
+% \hline
+% \end{tabular}
+% \end{table}
 
-%%==========================================================================================
-\begin{note}
-Now,
-I am gonna use a synthetic dataset to verify our method.
+% %%==========================================================================================
+% \begin{note}
+% Now,
+% I am gonna use a synthetic dataset to verify our method.
 
-The dataset we used in our experiment contains $10$ groups,
-each group consists of $10$ members,
-and each member has $8$ features: $F_1$ to $F_8$.
+% The dataset we used in our experiment contains $10$ groups,
+% each group consists of $10$ members,
+% and each member has $8$ features: $F_1$ to $F_8$.
 
-Table $5$ shows the original data of one group,
-and the bold features represent the ground truth,
-The ground truth include trivial outlying feature \{$F_1$\},
-and non-trivial outlying subspace \{$F_2$, $F_4$\}.
-\end{note}
-%%==========================================================================================
+% Table $5$ shows the original data of one group,
+% and the bold features represent the ground truth,
+% The ground truth include trivial outlying feature \{$F_1$\},
+% and non-trivial outlying subspace \{$F_2$, $F_4$\}.
+% \end{note}
+% %%==========================================================================================
 
-\end{slide}
+% \end{slide}
 %%
 %%==========================================================================================
 
 
 %%==========================================================================================
 %%
-\begin{slide}[toc=,bm=]{Synthetic Dataset Results}
+% \begin{slide}[toc=,bm=]{Synthetic Dataset Results}
 
-\begin{table}[tb]
-\setlength{\abovecaptionskip}{0pt}
-\setlength{\belowcaptionskip}{10pt}
-\centering
-\caption{The experiment result on synthetic dataset}
+% \begin{table}[tb]
+% \setlength{\abovecaptionskip}{0pt}
+% \setlength{\belowcaptionskip}{10pt}
+% \centering
+% \caption{The experiment result on synthetic dataset}
 
-\begin{tabular}{ c | c | c | c }
-\toprule
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Method     &  Truth Outlying Aspects    & Identified Aspects & Accuracy      \\
-\midrule
-  GOAM       &  $\{F_1\}$, $\{F_2F_4\}$   &  $\{F_1\}$, $\{F_2F_4\}$    & 100\%    \\
+% \begin{tabular}{ c | c | c | c }
+% \toprule
+%   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+%   Method     &  Truth Outlying Aspects    & Identified Aspects & Accuracy      \\
+% \midrule
+%   GOAM       &  $\{F_1\}$, $\{F_2F_4\}$   &  $\{F_1\}$, $\{F_2F_4\}$    & 100\%    \\
 
-Arithmetic Mean based OAM &  $\{F_1\}$, $\{F_2F_4\}$   &  $\{F_4\}$, $\{F_2\}$    &  0\% \\
+% Arithmetic Mean based OAM &  $\{F_1\}$, $\{F_2F_4\}$   &  $\{F_4\}$, $\{F_2\}$    &  0\% \\
 
-Median based OAM &  $\{F_1\}$, $\{F_2F_4\}$   &  $\{F_2\}$, $\{F_4\}$    &           0\% \\
-\bottomrule
-\end{tabular}
-\end{table}
+% Median based OAM &  $\{F_1\}$, $\{F_2F_4\}$   &  $\{F_2\}$, $\{F_4\}$    &           0\% \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
 
-%%==========================================================================================
-\begin{note}
-From table $6$,
-we can see that GOAM method can identify the trivial outlying features
-and non-trivial outlying subspaces accurately and
-it is obvious from the table that the accuracy of GOAM is the best,
-which is 100\%.
+% %%==========================================================================================
+% \begin{note}
+% From table $6$,
+% we can see that GOAM method can identify the trivial outlying features
+% and non-trivial outlying subspaces accurately and
+% it is obvious from the table that the accuracy of GOAM is the best,
+% which is 100\%.
 
-This is because the outlying aspects mining method
-can't obtain the features of a group and the scoring function
-is based on point to point metric.
-Therefore,
-it is not suitable for group outlying aspects mining.
-\end{note}
-%%==========================================================================================
+% This is because the outlying aspects mining method
+% can't obtain the features of a group and the scoring function
+% is based on point to point metric.
+% Therefore,
+% it is not suitable for group outlying aspects mining.
+% \end{note}
+% %%==========================================================================================
 
-\end{slide}
+% \end{slide}
 %%
 %%==========================================================================================
 
@@ -1721,18 +1729,18 @@ Utilize the pruning strategies to reduce time complexity.
 \end{itemize}
 
 %%==========================================================================================
-\begin{note}
-In conclusion,
-we firstly formalized the problem of
-group outlying aspects mining,
+% \begin{note}
+% In conclusion,
+% we firstly formalized the problem of
+% group outlying aspects mining,
 
-Then proposed a novel method GOAM algorithm to address the problem of
-group outlying aspects mining,
-and the proposed method use pruning to reduce time complexity
-while identifying the suitable set of outlying features for the interested group.
+% Then proposed a novel method GOAM algorithm to address the problem of
+% group outlying aspects mining,
+% and the proposed method use pruning to reduce time complexity
+% while identifying the suitable set of outlying features for the interested group.
 
-Thank you and any question?
-\end{note}
+% Thank you and any question?
+% \end{note}
 %%==========================================================================================
 
 \end{slide}
