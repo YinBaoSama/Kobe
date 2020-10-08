@@ -5,15 +5,7 @@
 \pdcontentsline{1}{7}{Data visualization}
 \pdcontentsline{0}{8}{Check the data ,Data cleaning,Data process}
 \pdcontentsline{0}{9}{Data visualization}
-\pdcontentsline{0}{10}{Data visualization}
-\pdcontentsline{0}{11}{Data visualization}
-\pdcontentsline{0}{12}{Data visualization}
-\pdcontentsline{0}{13}{Data visualization}
-\pdcontentsline{0}{14}{Data visualization}
-\pdcontentsline{0}{15}{Data visualization}
-\pdcontentsline{0}{16}{Data visualization}
-\pdcontentsline{0}{17}{Data visualization}
-\pdcontentsline{1}{18}{Build the model}
-\pdcontentsline{0}{19}{Build the model}
-\pdcontentsline{0}{20}{Build and train the model and produce the submission data}
-\pdcontentsline{1}{21}{Conclusion}
+\pdcontentsline{1}{17}{Build the model}
+\pdcontentsline{0}{18}{Build the model}
+\pdcontentsline{0}{19}{Build and train the model and produce the submission data}
+\pdcontentsline{1}{20}{Conclusion}
